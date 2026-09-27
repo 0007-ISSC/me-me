@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: me-me
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: LLM_API_KEY
+        sync: false
+      - key: GMAIL_USER
+        sync: false
